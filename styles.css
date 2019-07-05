@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+main {
+    margin: 0px auto;
+    display: flex;
+}
+
+main > section {
+    width: 340px;
+    padding: 10px;
+}
+
+main > section:first-child {
+    border-right: 3px solid black;
+    margin-right: 14px;
+}
+
+section > h3 {
+    margin: 8px 0px;
+}
+
+canvas#app {
+    image-rendering: pixelated;
+    height: 340px;
+    width: 340px;
+    border: 2px solid;
+    box-sizing: border-box;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#controls > button, input[type="submit"]  {
+    border: 2px solid;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+}
+
+#controls > span {
+    text-align: right;
+    width: 120px;
+}
+
+p, form {
+    font-size: 14px;
+}
+
+form > input, select {
+    font-size: inherit;
+}
+
+input[type="submit"] {
+    margin-top: 4px;
+
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        border-right: none !important;
+    }
+}
+  

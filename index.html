@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/png" href="./favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <script src="astar.js"></script>
+        <script defer src="script.js"></script>
+        <title>Mazebot - Solve</title>
+    </head>
+
+    <body>
+        <main>
+            <section>
+                <canvas id="app"></canvas>
+                <div id="controls">
+                    <button id="solve" disabled>Solve</button>
+                    <button id="reset" disabled>Reset</button>
+                    <span id="info">Loading</span>
+                </div>
+            </section>
+            <section>
+                <h3>About:</h3>
+                <p>
+                    The solver uses the <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">A* path finding algorithm</a>. Much of the implementation is based of <a href="https://www.youtube.com/watch?v=aKYlikFAV4k">Dan Shiffmans video</a> with a some alterations.
+                </p>
+                <p>I have used the Manhattan heuristic for <i>(hopefully)</i> increased speed and performance across the grid.</p>
+                <p>The mazes are generated through the <a href="https://github.com/noops-challenge/mazebot">GitHub noops maze bot</a>.</p>
+
+                <p>Made by <a href="https://twitter.com/kaleidawave">kaleidawave</a> - <a href="https://github.com/kaleidawave/mazebot">read more</a></p>
+
+                <h3>Settings:</h3>
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="60">60</option>
+                        <option value="100">100</option>
+                        <option value="120">120</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
+                    </select>
+                    <br>
+                    <label>Instant Solve:</label>
+                    <input type="checkbox" name="instant" value="true"><br>
+                    <input type="submit" value="Refresh">
+                </form>
+            </section>
+        </main>
+    </body>
+
+</html>
